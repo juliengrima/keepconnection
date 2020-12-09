@@ -1,0 +1,154 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}savoir faire{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/alvarotrigo-css/fullpage.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/alvarotrigo-css/parallax-alvarotrigo.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/alvarotrigo-css/exemples.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/alvarotrigo-css/fonts.css') }}" />
+{% endblock %}
+
+{% block body %}
+
+    <ul id="menu">
+        <li><a href="{{ path('app_index') }}">Accueil</a></li>
+        <li><a href="{{ path('app_downloads') }}">Téléchargements</a></li>
+        <li><a href="{{ path('app_whoarewe') }}">Qui sommes nous</a></li>
+        <li><a href="{{ path('app_knowhow') }}">Notre savoir faire</a></li>
+        <li><a href="{{ path('app_services') }}">Nos services</a></li>
+        <li><a href="{{ path('app_reference') }}">Nos références</a></li>
+    </ul>
+
+    <div id="myContainer">
+        <div class="section" id="section1">
+            <div class="slide" id="slide1-1">
+                <div class="fp-bg"></div>
+                <div class="container">
+                    <h1>Audit, Vente logiciel et matériel</h1>
+                    <p>La solution pour faire évoluer votre parc informatique</p>
+                    <p>Que vous souhaitiez installer un nouveau serveur ou une nouvelle
+                        application ou changer de prestataire pour maintenir vos installations informatiques,
+                        il est essentiel d’avoir une vision claire de vos matériels et logiciels informatiques.</p>
+                </div>
+            </div>
+            <div class="slide" id="slide1-2">
+                <div class="fp-bg"></div>
+                <div class="container">
+                    <div>
+                        <p>Keep Connection réalise un audit de votre parc informatique afin
+                            de vous donner une vision précise de votre parc
+                            informatique et répondre à toutes vos problématiques :</p>
+                    </div>
+                    <div>
+                        <p>--------------------</p>
+                    </div>
+                    <div>
+                        <p>votre serveur fonctionne-t-il de manière satisfaisante ?</p>
+                        <p>vos logiciels sont-ils tous à jour ? (licences, accès)</p>
+                        <p>vos équipements fonctionnent-ils de manière homogène ?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="slide1-3">
+                <div class="fp-bg"></div>
+                <div class="container">
+                    <p>Keep Connection vous livre un diagnostic précis de votre parc informatique :
+                        vous aurez également une idée précise du coût par poste à prévoir
+                        pour moderniser votre parc. Nous vous conseillons pour mettre en place
+                        rapidement une solution de sauvegarde.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <div class="fp-bg" id="section2"></div>
+            <div class="container">
+                <h1>Maintenance informatique sur site, Infogérance</h1>
+                <p>L’équipe technique de Keep Connection intervient directement dans vos locaux dans
+                    les plus brefs délais pour dépanner vos équipements informatiques, installer
+                    de nouveaux logiciels, réaliser les mises à jour et/ou installer et
+                    paramétrer votre réseau d’entreprise.</p>
+            </div>
+        </div>
+        <div class="section" id="section3">
+            <div class="slide" id="slide3-1">
+                <div class="fp-bg"></div>
+                <div class="container">
+                    <h1>Télémaintenance</h1>
+                    <p>Une solution fiable pour un dépannage à distance</p>
+                    <p>Sur simple appel téléphonique, un technicien Keep Connection se connecte à
+                        distance pour dépanner le poste de travail (ordinateur, serveur) sur
+                        lequel vous rencontrez des problèmes.</p>
+                </div>
+            </div>
+            <div class="slide" id="slide3-2">
+                <div class="fp-bg"></div>
+                <div class="container">
+                    <h1>Sécurité</h1>
+                    <p>Anti-virus, anti-spam, pare-feu.</p>
+                    <p>L’équipe technique de Keep Connection installe sur vos postes de travail des anti-virus,
+                        anti-spam et parfeu sur votre serveur pour vous protéger des attaques externes
+                        toujours croissantes : spam via vos mails, virus par mail, intrusion sur votre réseau.</p>
+                </div>
+            </div>
+            <div class="slide" id="slide3-3">
+                <div class="intro">
+                    <div class="fp-bg"></div>
+                    <div class="container">
+                        <h1>Sauvegarde de données</h1>
+                        <p>Dans le cadre de notre mission de maintenance, l’équipe technique de Keep Connection veille également
+                            à la sécurisation et la sauvegarde de vos données. Les informations stockées sur vos
+                            serveurs sont sauvegardées quotidiennement. Plus besoin de vous préoccuper des vos données
+                            en cas de panne ou plantage d’un disque dur : l’équipe Keep Connection peut remonter la sauvegarde de la veille.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="slide3-4">
+                <div class="fp-bg"></div>
+                <div class="container">
+{#                    <h1>DOCUMENTED</h1>#}
+{#                    <p>If fullPage.js is known for one thing it's for its great documentation!</p>#}
+{#                </div>#}
+            </div>
+        </div>
+        <div class="section" id="section4">
+            <div class="fp-bg"></div>
+            <div class="container">
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="_4" value="3" />
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('js/alvarotrigo-js/fullpage.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/alvarotrigo-js/fullpage.parallax.limited.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/alvarotrigo-js/fullpage.extensions.min.js') }}"></script>
+
+    <script type="text/javascript">
+
+        // Initializing fullpage.js
+        initialize(false);
+
+        function initialize(hasScrollBar){
+            new fullpage('#myContainer', {
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
+                menu: '#menu',
+                slidesNavigation: false,
+                parallax: true,
+                parallaxKey: 'YWx2YXJvdHJpZ28uY29tXzlNZGNHRnlZV3hzWVhnPTFyRQ==',
+                parallaxOptions: {
+                    type: 'cover',
+                    percentage: 100,
+                    property: 'translate'
+                },
+                scrollingSpeed: 1000,
+                autoScrolling: true,
+                scrollBar: false,
+                fitToSection:false
+            });
+        }
+
+    </script>
+{% endblock %}

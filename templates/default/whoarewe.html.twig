@@ -1,0 +1,88 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}qui sommes nous{% endblock %}
+
+ {% block body %}
+     <div class="parallax-container">
+         <div class="parallax">
+             <img src="{{ asset('pictures/whoarewe.png') }}" class="responsive-img" alt="Parallax">
+             <h2 class="header center title-index">Qui sommes nous ?</h2>
+         </div>
+     </div>
+     <div class="section white">
+         <div class="row container">
+             <h2 class="header center">Présentation de la société</h2>
+             <p class="grey-text text-darken-3 lighten-3">Keep Connection gère et optimise le parc informatique de ses clients:
+                 télémaintenance, audit logiciel et matériel, dépannage à distance ou dans directement dans vos locaux.
+                 Keep Connection est une PME composée d’experts pour gérer votre parc informatique.</p>
+         </div>
+     </div>
+     <div class="parallax-container">
+         <div class="parallax"><img src="{{ asset('pictures/whoarewe-empty.jpg') }}" class="responsive-img" alt="Parallax"></div>
+     </div>
+     <div class="section white">
+         <div class="row container">
+             <h2 class="header center">Notre organisation</h2>
+             <h4>Une équipe compétente et fiable</h4>
+             <p class="grey-text text-darken-3 lighten-3">Créé en 1993, Keep Connection a rapidement décelé le besoin de nombreuses
+                 PME de déléguer la gestion de leur parc informatique. Composée d’experts en matériel, techniciens réseaux,
+                 experts sécurité, Keep Connection gère votre parc, réduit vos coûts d’équipements, optimise le temps de production
+                 de vos équipes, assure la mise à jour de vos logiciels et sa maintenance.</p>
+
+             <div class="row">
+                 <div class="col s12 m6">
+                     <div class="card blue-grey darken-1">
+                         <div class="card-content white-text">
+                             <h4 class="card-title">Nos services</h4>
+                             <h6 class="decoration">Des prestations complètes</h6>
+                             <p>Nos interventions portent sur l’ensemble de votre équipement informatique :
+                                 serveurs, postes de travail, tablettes, imprimantes, composants informatiques,
+                                 consommables (cartouches d’imprimantes, carte réseau, etc.).
+                                 Nous proposons une gamme de services élargie : télémaintenance, maintenance sur site,
+                                 entretien, audit logiciel et matériel.</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col s12 m6">
+                     <div class="card blue-grey darken-1">
+                         <div class="card-content white-text">
+                             <h4 class="card-title">Nos atouts</h4>
+                             <h6 class="decoration">Un service de qualité</h6>
+                             <ul>
+                                 <li>Une équipe d’experts (réseau, matériel informatique, techniciens)</li>
+                                 <li>L’optimisation du fonctionnement de vos équipements informatiques</li>
+                                 <li>Un gain de temps précieux pour vos collaborateurs : télémaintenance pour un rétablissement de votre réseau ou du bon fonctionnement d’un ordinateur</li>
+                                 <li>Un parc informatique moderne et performant</li>
+                                 <li>Des coûts d’équipements optimisés</li>
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col s12 m12">
+                     <div class="card blue-grey darken-1">
+                         <div class="card-content white-text">
+                             <h4 class="card-title">Nos engagements</h4>
+                             <h6 class="decoration">Une charte de confiance</h6>
+                             <p>Keep Connection dispose d’une charte de confiance : charte qualité au service de nos clients
+                                 et la charte éthique.</p>
+                             <a href="{{ path('app_chart') }}" class="center">Lire notre charte de confiance.</a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+         </div>
+     </div>
+     <!-- End Parallax  -->
+ {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.parallax').parallax();
+        });
+    </script>
+{% endblock %}

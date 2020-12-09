@@ -1,0 +1,49 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Informatique et maintenance des PME{% endblock %}
+
+ {% block body %}
+     <div class="parallax-container">
+         <div class="parallax">
+             <img src="{{ asset('pictures/F4A5328.jpg') }}" class="responsive-img" alt="keepconnection">
+             <h1 class="index-h1 center"><span class="span-index-h1-1">KEEP</span> <span class="span-index-h1-2">CONNECTION</span></h1>
+             <h3 class="index-h3 center">votre spécialiste informatique pour TPE & PME.</h3>
+         </div>
+     </div>
+     <div class="section white">
+         <div class="row container">
+             <h2 class="header center">Présentation de la société</h2>
+             <p class="grey-text text-darken-3 lighten-3">Depuis plus de 20 ans, Keep Connection dépanne et gère le bon fonctionnement de
+                 votre parc informatique : vente, audit, entretien, dépannage, télémaintenance, fourniture d’équipements informatiques, sécurité.
+                 Vous souhaitez déléguer la gestion et l’entretien de votre matériel informatique? Keep Connection assure l’infogérance :
+                 vous bénéficiez d’une équipe pour gérer et maintenir votre parc, sans interruption de service.
+                 Maîtriser vos dépenses informatiques tout en maintenant votre parc à jour et en optant pour nos solutions de
+                 location évolutives avec notre partenaire financier.
+                 Nos fournisseurs et partenaires
+                 HP, Dell, Microsoft, Canon, Sony, Toshiba, Asus, Netasq, Eset Nod32.</p>
+         </div>
+     </div>
+     <div class="parallax-container">
+         <div class="parallax"><img src="{{ asset('pictures/processeur.jpg') }}" class="responsive-img" alt="Parallax"></div>
+     </div>
+     <div class="section white">
+         <div class="row container">
+             <h2 class="header center">Notre organisation</h2>
+             <h4>Une équipe compétente et fiable</h4>
+             <p class="grey-text text-darken-3 lighten-3">Créé en 1993, Keep Connection a rapidement décelé le besoin de nombreuses
+                 PME de déléguer la gestion de leur parc informatique. Composée d’experts en matériel, techniciens réseaux,
+                 experts sécurité, Keep Connection gère votre parc, réduit vos coûts d’équipements, optimise le temps de production
+                 de vos équipes, assure la mise à jour de vos logiciels et sa maintenance.</p>
+         </div>
+     </div>
+     <!-- End Parallax  -->
+ {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.parallax').parallax();
+        });
+    </script>
+{% endblock %}

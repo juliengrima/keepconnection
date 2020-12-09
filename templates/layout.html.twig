@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="nav-image">
+                <a href="{{ path('app_index') }}" >
+                    <img src="{{ asset('pictures/keeplogo.png') }}">
+                </a>
+            </div>
+        </li>
+        <li><a href="{{ path('app_downloads') }}" class="waves-effect divider"><i class="material-icons">cloud_download</i>Télémaintenance</a></li>
+        <li><a href="{{ path('app_whoarewe') }}" class="waves-effect"><i class="material-icons">supervisor_account</i>Qui sommes nous</a></li>
+        <li><a href="{{ path('app_knowhow') }}" class="waves-effect"><i class="material-icons">emoji_objects</i>Notre savoir faire</a></li>
+        <li><a href="{{ path('app_services') }}" class="waves-effect"><i class="material-icons">computer</i>Nos services</a></li>
+        <li><a href="{{ path('app_reference') }}" class="waves-effect"><i class="material-icons">account_tree</i>Nos références</a></li>
+{#        <li><a href="#!" class="waves-effect"><i class="material-icons">email</i>Nous contacter</a></li>#}
+{#        <li><div class="divider"></div></li>#}
+{#        <li><a class="subheader">Subheader</a></li>#}
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger link-menu"><i class="material-icons material-icons-menu">menu</i></a>
+
+{% endblock %}
+{% block footer %}
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <p class="">
+                        <a href="mailto:contact@keep-connection.fr" class="action-button shadow animate light-blue"> {# colors : blue/red/green/yellow #}
+                           Contactez nous
+                        </a>
+                    </p>
+{#                    <p class="grey-text text-lighten-4"></p>#}
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul class="icons material-icons">
+                        <li><a href="http://www.groupe-tse.fr/ecotoner/" class="icon brands fab fa-google icons-color" target="_blank"><span class="label">Google</span></a></li>
+                        <li><a href="https://github.com/juliengrima" class="icon brands fa-github icons-color" target="_blank"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://fr.linkedin.com/in/julien-grima-927612129" class="icon brands fa-linkedin-in icons-color" target="_blank"><span class="label">LinkedIn</span></a></li>
+{#                        <li><a href="#" class="icon brands fa-facebook-f icons-color" target="_blank"><span class="label">Facebook</span></a></li>#}
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row center">
+                    <div class="col s12 m6">
+                        <ul>
+                            <li>Adresse :</li>
+                            <li>2, rue Gambetta</li>
+                            <li>77210 AVON</li>
+                        </ul>
+                    </div>
+                    <div class="col s12 m6">
+                        <ul>
+                            <li>Un conseiller répond à toutes vos questions au :</li>
+                            <li> 01 64 69 00 26</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright center">
+            <div class="container">
+                Keep Connection © 2019 Tout droits réservés
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+        });
+    </script>
+{% endblock %}

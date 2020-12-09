@@ -1,0 +1,84 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}référence partenaire{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/references/reference.css') }}" />
+{% endblock %}
+
+{% block body %}
+     <div class="slider">
+         <ul class="slides">
+             <li>
+                <img src="{{ asset('pictures/aiglenoir.jpg') }}"> <!-- random image -->
+                 <a href="http://www.aiglenoirhotel.com/fr" target="_blank">
+                     <div class="caption center-align">
+                         <h3>Hotel de l'Aigle Noir</h3>
+                     </div>
+                 </a>
+             </li>
+             <li>
+                 <img src="{{ asset('pictures/concession_melun.jpg') }}"> <!-- random image -->
+                 <a href="http://www.honda-melun.com/" target="_blank">
+                     <div class="caption left-align">
+                         <h3>DPL Honda</h3>
+                     </div>
+                 </a>
+             </li>
+             <li>
+                 <img src="{{ asset('pictures/renault-nogent.jpg') }}"> <!-- random image -->
+                 <a href="https://www.renault.fr/concessionnaire.nogent-le-rotrou.html" target="_blank">
+                     <div class="caption right-align">
+                         <h3>Le Fertois Auto</h3>
+                     </div>
+                 </a>
+             </li>
+             <li>
+                <img src="{{ asset('pictures/adallie.jpg') }}"> <!-- random image -->
+                 <a href="https://www.orpi.com/adallie.melun/expertise/" target="_blank">
+                     <div class="caption center-align">
+                         <h3>4C Immobilier</h3>
+                     </div>
+                 </a>
+             </li>
+         </ul>
+     </div>
+
+     <div class="section white">
+         <div class="row container">
+             <h2 class="header center">Nos atouts</h2>
+             <div class="col s12 m6">
+                 <ul class="">
+                     <li class=""><i class="material-icons material-color">check</i>Des prestations complètes au service des PME</li>
+                     <li class=""><i class="material-icons material-color">check</i>Un interlocuteur unique</li>
+                     <li class=""><i class="material-icons material-color">check</i>Des tarifs compétitifs</li>
+                     <li class=""><i class="material-icons material-color">check</i>Rapidité de livraison et d’approvisionnements</li>
+                     <li class=""><i class="material-icons material-color">check</i>Des services étendus de maintenance technique</li>
+                     <li class=""><i class="material-icons material-color">check</i>Des consommables rapidement livrés grâce à un large                                                                                     stock disponible</li>
+                 </ul>
+             </div>
+             <div>
+
+             </div>
+         </div>
+     </div>
+     <!-- End Parallax  -->
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.parallax').parallax();
+        });
+    </script>
+    <script type="text/javascript">
+        $('.slider').slider({
+            full_width: true,
+            interval: 5000
+        });
+
+        $('.slider').slider('start');
+    </script>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}nos services{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/services/services.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="parallax-container parallax-container-page">
+        <div class="parallax"><h1 class="shadows">Matériel informatique</h1><img src="{{ asset('pictures/processeur.jpg') }}" class="responsive-img" alt="Parallax"></div>
+    </div>
+    <div class="section white">
+        <div class="row container">
+            <h4>Des marques connues, des équipements fiables</h4>
+            <p class="grey-text text-darken-3 lighten-3">Un expert Keep Connection vous conseille dans le choix de matériel en prenant en compte votre
+                organisation professionnelle et votre potentiel d'évolution. Nous sommes reconnus par nos clients pour notre sérieux et la
+                qualité de nos prestations. Nous assurons la vente de matériel informatique, matériel périphérique, logiciels et consommables.
+                Nos marques : Dell, HP. Nous proposons également des contrats de location de matériel informatique et de logiciels.</p>
+        </div>
+    </div>
+    <div class="parallax-container parallax-container-page">
+        <div class="parallax"><h1 class="shadows">Consommables</h1><img src="{{ asset('pictures/toner.jpg') }}" class="responsive-img" alt="Parallax"></div>
+    </div>
+    <div class="section white">
+        <div class="row container">
+            <h4>Une livraison rapide</h4>
+            <p class="grey-text text-darken-3 lighten-3">Nous fournissons des consommables de toutes marques et garantissons
+                une livraison rapide à l'adresse de votre choix (Laser, jet d'encre,...)</p>
+            <ul>
+                <li class=""><i class="material-icons material-color">check</i>maintenance préventive : mise à jour de vos logiciels, veille au bon fonctionnement de votre système de sauvegarde, supervision de votre réseau</li>
+                <li class=""><i class="material-icons material-color">check</i>maintenance d'urgence : remise en marche de vos ordinateurs, de votre réseau</li>
+                <li class=""><i class="material-icons material-color">check</i>maintenance d'assistance : correction des dysfonctionnements sur vos postes</li>
+            </ul>
+        </div>
+    </div>
+    <div class="parallax-container parallax-container-page">
+        <div class="parallax"><h1 class="shadows">Télémaintenance</h1><img src="{{ asset('pictures/telemaintenance.jpg') }}" class="responsive-img" alt="Parallax"></div>
+    </div>
+    <div class="section white">
+        <div class="row container">
+            <h4>Un dépannage immédiat</h4>
+            <p class="grey-text text-darken-3 lighten-3">Après avoir souscrit un contrat de télémaintenance, nous vous installons un logiciel
+                fiable et sécurisé pour pour nous permettre d'accéder à votre poste de travail à distance. Ainsi, en cas de
+                problème si vous avez besoin d'un dépannage immédiat, un simple appel suffit pour qu'un technicien expert de Keep Connection
+                se connecte à votre poste et assure les actions correctives.</p>
+        </div>
+    </div>
+    <!-- End Parallax  -->
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.parallax').parallax();
+        });
+    </script>
+{% endblock %}

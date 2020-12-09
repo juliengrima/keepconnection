@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>KeepConnection - {% block title %}{% endblock %}</title>
+    <meta name="author" content="Julien Grima" />
+    <meta name="description" content="Informatique réseau PME télémaintenance" />
+    <meta name="keywords"  content="maintenance,serveur,antivirus,télémaintenance,technicien,informatique,service,partenaires,ecotoner,atous,keep,connection," />
+    <meta name="Resource-type" content="Document" />
+    <!-- Compiled and minified CSS -->
+    {#        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">#}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4d01033d40.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}">
+    {% block stylesheets %}{% endblock %}
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+
+    <meta property="og:title" content="New parallax effect!">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="New parallax effect for fullPage.js! Check it out!">
+    <meta property="og:image" content="http://alvarotrigo.com/fullPage/extensions/imgs/promo/parallax.png">
+    <meta property="og:url" content="http://alvarotrigo.com/fullPage/extensions/parallax.html">
+    {#        <meta name="twitter:card" content="photo">#}
+    {#        <meta name="twitter:site" content="@imac2">#}
+    {#        <meta name="twitter:creator" content="@imac2">#}
+    {#        <meta name="twitter:title" content="New parallax effect!">#}
+    {#        <meta name="twitter:description" content="New parallax effect for fullPage.js! Check it out!">#}
+    {#        <meta name="twitter:image" content="http://alvarotrigo.com/fullPage/extensions/imgs/promo/parallax.png">#}
+    {#        <meta name="twitter:url" content="http://alvarotrigo.com/fullPage/extensions/parallax.html">#}
+
+</head>
+<body>
+{% block header %}{% endblock %}
+{% block body %}{% endblock %}
+{% block footer %}{% endblock %}
+{% block javascripts %}
+    <!-- Compiled and minified JavaScript -->
+    {#            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>#}
+    <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ asset('js/materialize.min.js') }}"></script>
+    <script src="{{ asset('js/mainjs.js') }}"></script>
+{% endblock %}
+</body>
 </html>

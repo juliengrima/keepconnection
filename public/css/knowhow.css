@@ -1,0 +1,97 @@
+html, body, .block {
+    height: 100%;
+}
+nav ul li a:hover, nav ul li a.active {
+    background-color: rgba(0,0,0,.1);
+}
+
+div.header {
+    height: 2em;
+    width: 100%;
+    background: #eee;
+    position: static;
+    top: 0px;
+}
+
+div#main {
+}
+
+text.sequence {
+    text-anchor: middle;
+    font-family: monospace;
+}
+line.sequence-bg{
+    stroke-width:3px;
+    stroke:#aaa;
+}
+
+g.axis-bubble text {
+    text-anchor: middle;
+    alignment-baseline: middle;
+    font-family: monospace;
+}
+g.axis-bubble rect {
+    stroke: #777;
+    fill: white;
+}
+svg.pviz rect.background {
+    fill: #f5f5f5;
+}
+
+rect.layer-background {
+    fill: white;
+    opacity: 0;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+g.layer:hover rect.layer-background {
+    opacity: 1.0;
+}
+
+/**
+ *     color brewer 7 class paired #a6cee3 #1f78b4 #b2df8a #33a02c #fb9a99 #e31a1c #fdbf6f
+ */
+g.feature rect.feature {
+    fill: #a6cee3;
+    fill-opacity: 0.9;
+    stroke: #555;
+    stroke-opacity: 0.6;
+}
+
+g.feature text {
+    alignment-baseline: middle;
+    opacity: 0.75;
+}
+
+g.feature.Region rect.feature {
+    fill: #1f78b4;
+}
+g.feature.Molecule_processing rect.feature {
+    fill: #b2df8a;
+}
+
+g.layer g.strikeout line {
+    stroke: #bbb;
+    stroke-width: 2px;
+}
+
+.darken3-blue-grey{
+    background-color: #34495e;
+}
+.darken2-blue-grey{
+    background-color: #5d6d7e;
+}
+.darken1-blue-grey{
+    background-color:  #85929e ;
+}
+.white-text{
+    color: ghostwhite;
+    font-size: x-large;
+    z-index: 5;
+}
+
+.divider {
+    height: 50px;
+}

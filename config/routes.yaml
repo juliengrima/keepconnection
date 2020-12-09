@@ -1,3 +1,32 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+############################################################
+############################################################
+####################### TEMPLATES ##########################
+############################################################
+############################################################
+app_index:
+    path: /
+    controller: App\Controller\DefaultController::index
+    
+app_downloads:
+    path: /maintenance
+    controller: App\Controller\DefaultController::downloads
+    
+app_whoarewe:
+    path: /qui_sommes_nous
+    controller: App\Controller\DefaultController::whoarewe
+    
+app_chart:
+    path: /qui_sommes_nous/charte
+    controller: App\Controller\DefaultController::charte
+    
+app_knowhow:
+    path: /savoir_faire
+    controller: App\Controller\DefaultController::knowhow
+    
+app_services:
+    path: /services
+    controller: App\Controller\DefaultController::services
+    
+app_reference:
+    path : /references
+    controller: App\Controller\DefaultController::reference
