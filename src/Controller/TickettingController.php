@@ -20,9 +20,12 @@ class TickettingController extends AbstractController
      */
     public function index(TickettingRepository $tickettingRepository): Response
     {
-        return $this->render('ticketting/index.html.twig', [
-            'tickettings' => $tickettingRepository->findAll(),
-        ]);
+//        if () {
+//             $userId = $this->getUser();
+            return $this->render('ticketting/index.html.twig', [
+                'tickettings' => $tickettingRepository->findBy( array('treated' => null) ),
+            ]);
+//        }
     }
 
     /**

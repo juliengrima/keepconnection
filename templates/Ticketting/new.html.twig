@@ -1,11 +1,17 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout.html.twig' %}
 
 {% block title %}New Ticketting{% endblock %}
 
 {% block body %}
-    <h1>Create new Ticketting</h1>
+<div class="container">
+    <div class="row center">
+        <h1>Télémaintenance</h1>
+        <h3>Création de mon ticket</h3>
+    </div>
+    <div class="row">
+        {{ include('ticketting/_form.html.twig') }}
+        <a href="{{ path('ticketting_index') }}">back to list</a>
+    </div>
+</div>
 
-    {{ include('ticketting/_form.html.twig') }}
-
-    <a href="{{ path('ticketting_index') }}">back to list</a>
 {% endblock %}

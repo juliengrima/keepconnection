@@ -4,6 +4,10 @@
     height: 50%;
 }
 
+table{
+    margin-top: 10%;
+}
+
 /* NAVBAR */
 .material-icons-menu{
     position: fixed;

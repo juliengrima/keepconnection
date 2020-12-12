@@ -15,7 +15,7 @@ class TickettingType extends AbstractType
             ->add('society')
             ->add('phone')
             ->add('comment')
-            ->add('date')
+//            ->add('date')
             ->add('repair')
             ->add('address')
         ;
