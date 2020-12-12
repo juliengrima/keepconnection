@@ -13,5 +13,5 @@ return [
     Symfony\Bundle\DebugBundle\DebugBundle::class => ['dev' => true, 'test' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
 //    Bundles Manual Creating
-    App\Ticketting\TickettingBundle\TickettingBundle::class => ['all' => true],
+    App\Bundles\TickettingBundle\TickettingBundle::class => ['all' => true],
 ];
