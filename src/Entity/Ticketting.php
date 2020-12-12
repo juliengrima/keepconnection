@@ -10,6 +10,56 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Ticketting
 {
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->society . $this->user_id;
+    }
+
+    public function __construct()
+    {
+//        Give date for ticket
+        $this->date = new \DateTime('now');
+
+//        take ip address of the computer who make the ticket
+        $interfaces = ['wlan', 'eth', 'en'];
+        $found = 0;
+        $interfaces_text = '';
+        $interfaces_text_short = '';
+
+        foreach ($interfaces as $interface) {
+
+            for ($i = 0;$i < 5;++$i) {
+
+                $command = '/sbin/ifconfig '.$interface.$i." | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'";
+                $localIP = exec($command);
+
+                if ($localIP != '') {
+
+                    $interfaces_text .= '('.$interface.$i.')'.$localIP;
+                    $interfaces_text_short .= '('.$interface.$i.') '.$localIP;
+                    ++$found;
+
+                } else {
+
+                    $command = '/sbin/ifconfig '.$interface.$i." | grep 'inet' | cut -d: -f2 | awk '{ print $2}'";
+                    $localIP = exec($command);
+
+                    if ($localIP != '') {
+
+                        $interfaces_text .= '('.$interface.$i.')'.$localIP;
+                        $interfaces_text_short .= '('.$interface.$i.') '.$localIP;
+                        ++$found;
+
+                    }
+                }
+            }
+        }
+
+        $this->ip_address = $interfaces_text;
+
+    }
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -36,6 +86,16 @@ class Ticketting
      * @ORM\Column(type="datetime")
      */
     private $date;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $repair;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $address;
 
     public function getId(): ?int
     {
@@ -86,6 +146,30 @@ class Ticketting
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getRepair(): ?bool
+    {
+        return $this->repair;
+    }
+
+    public function setRepair(bool $repair): self
+    {
+        $this->repair = $repair;
+
+        return $this;
+    }
+
+    public function getAddress(): ?string
+    {
+        return $this->address;
+    }
+
+    public function setAddress(?string $address): self
+    {
+        $this->address = $address;
 
         return $this;
     }
