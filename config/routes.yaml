@@ -45,15 +45,15 @@ app_maintenance_index_ticket:
     controller: App\Controller\TickettingController::index
 
 app_maintenance_new_ticket:
-    path : /ticket_de_maintenance
+    path : /ticket_de_maintenance/new
     controller: App\Controller\TickettingController::new
     
 app_maintenance_edit_ticket:
-    path : /ticket_de_maintenance
+    path : /ticket_de_maintenance/edit
     controller: App\Controller\TickettingController::edit
     
 app_maintenance_delete_ticket:
-    path : /ticket_de_maintenance
+    path : /ticket_de_maintenance/delete
     controller: App\Controller\TickettingController::delete
     
 ############################################################

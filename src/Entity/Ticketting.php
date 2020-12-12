@@ -97,6 +97,11 @@ class Ticketting
      */
     private $address;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $treated;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -170,6 +175,18 @@ class Ticketting
     public function setAddress(?string $address): self
     {
         $this->address = $address;
+
+        return $this;
+    }
+
+    public function getTreated(): ?bool
+    {
+        return $this->treated;
+    }
+
+    public function setTreated(?bool $treated): self
+    {
+        $this->treated = $treated;
 
         return $this;
     }

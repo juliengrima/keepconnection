@@ -1,45 +1,60 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout.html.twig' %}
 
-{% block title %}Ticketting index{% endblock %}
+{% block title %}Télémaintenance index{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready( function () {
+            $('#table_id').DataTable();
+        } );
+    </script>
+{% endblock %}
 
 {% block body %}
-    <h1>Ticketting index</h1>
+    <div class="container">
+        <div class="center">
+            <h1>Télémaintenance</h1>
+            <a href="{{ path('ticketting_new') }}">Nouveau ticket</a>
+        </div>
 
-    <table class="table">
-        <thead>
+        <table id="table_id" class="display table">
+            <thead>
             <tr>
                 <th>Id</th>
-                <th>Society</th>
-                <th>Phone</th>
-                <th>Comment</th>
+                <th>Société/Personne</th>
+                <th>Téléphone</th>
+                <th>Commentaire</th>
                 <th>Date</th>
-                <th>Repair</th>
-                <th>Address</th>
+                <th>Type de maintenance</th>
+                <th>Addresse</th>
                 <th>actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for ticketting in tickettings %}
-            <tr>
-                <td>{{ ticketting.id }}</td>
-                <td>{{ ticketting.society }}</td>
-                <td>{{ ticketting.phone }}</td>
-                <td>{{ ticketting.comment }}</td>
-                <td>{{ ticketting.date ? ticketting.date|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ ticketting.repair ? 'Yes' : 'No' }}</td>
-                <td>{{ ticketting.address }}</td>
-                <td>
-                    <a href="{{ path('ticketting_show', {'id': ticketting.id}) }}">show</a>
-                    <a href="{{ path('ticketting_edit', {'id': ticketting.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="8">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('ticketting_new') }}">Create new</a>
+            </thead>
+            <tbody>
+            {% for ticketting in tickettings %}
+                <tr>
+                    <td>{{ ticketting.id }}</td>
+                    <td>{{ ticketting.society }}</td>
+                    <td>{{ ticketting.phone }}</td>
+                    <td>{{ ticketting.comment }}</td>
+                    <td>{{ ticketting.date ? ticketting.date|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ ticketting.repair ? 'Yes' : 'No' }}</td>
+                    <td>{{ ticketting.address }}</td>
+                    <td>
+                        <a href="{{ path('ticketting_show', {'id': ticketting.id}) }}">show</a>
+                        <a href="{{ path('ticketting_edit', {'id': ticketting.id}) }}">edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="8">Pas de ticket trouvés</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}
