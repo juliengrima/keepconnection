@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ticketting index{% endblock %}
+
+{% block body %}
+    <h1>Ticketting index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Society</th>
+                <th>Phone</th>
+                <th>Comment</th>
+                <th>Date</th>
+                <th>Repair</th>
+                <th>Address</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ticketting in tickettings %}
+            <tr>
+                <td>{{ ticketting.id }}</td>
+                <td>{{ ticketting.society }}</td>
+                <td>{{ ticketting.phone }}</td>
+                <td>{{ ticketting.comment }}</td>
+                <td>{{ ticketting.date ? ticketting.date|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ ticketting.repair ? 'Yes' : 'No' }}</td>
+                <td>{{ ticketting.address }}</td>
+                <td>
+                    <a href="{{ path('ticketting_show', {'id': ticketting.id}) }}">show</a>
+                    <a href="{{ path('ticketting_edit', {'id': ticketting.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('ticketting_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ticketting{% endblock %}
+
+{% block body %}
+    <h1>Ticketting</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ ticketting.id }}</td>
+            </tr>
+            <tr>
+                <th>Society</th>
+                <td>{{ ticketting.society }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ ticketting.phone }}</td>
+            </tr>
+            <tr>
+                <th>Comment</th>
+                <td>{{ ticketting.comment }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ ticketting.date ? ticketting.date|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Repair</th>
+                <td>{{ ticketting.repair ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ ticketting.address }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('ticketting_index') }}">back to list</a>
+
+    <a href="{{ path('ticketting_edit', {'id': ticketting.id}) }}">edit</a>
+
+    {{ include('ticketting/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Ticketting{% endblock %}
+
+{% block body %}
+    <h1>Create new Ticketting</h1>
+
+    {{ include('ticketting/_form.html.twig') }}
+
+    <a href="{{ path('ticketting_index') }}">back to list</a>
+{% endblock %}
