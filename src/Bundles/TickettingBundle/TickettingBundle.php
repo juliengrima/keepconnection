@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Ticketting\TickettingBundle;
+namespace App\Bundles\TickettingBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
