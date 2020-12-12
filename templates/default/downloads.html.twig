@@ -4,181 +4,36 @@
 
 {% block body %}
     <div class="parallax-container">
-        <div class="parallax"><img src="{{ asset('pictures/TeamViewer.png.webp') }}" class="responsive-img" alt="Parallax"></div>
+        <div class="parallax"><img src="{{ asset('pictures/Logo_telechargement.png') }}" class="responsive-img" alt="Parallax"></div>
     </div>
-    <div class="section white">
-        <div class="row container">
+    <div class="section light-grey">
+        <div class="container">
             <div class="row center">
-                <h3 class="header">Télémaintenance</h3>
-                <p class="grey-text text-darken-3 lighten-3">Dans cette section, vous trouverez les applications
-                    de télémaintenance pour chacun des sytèmes d'exploitations.</p>
-{#                USER & ADMIN BUTONS FOR TICKETS#}
-                <div class="col s6 m6 l6">
-                    <a href="{{ path('app_maintenance_new_ticket') }}">Nouveau ticket de maintenance</a>
-                </div>
-                <div class="col s6 m6 l6">
-                    <a href="{{ path('app_maintenance_index_ticket') }}">Mes tickets de maintenances</a>
-                </div>
-            </div>
-            <div class="container center">
-                <h2 class="header title">Téléchargements</h2>
-{#                USER & ADMIN #}
-                {# WINDOWS #}
-                <div class="row row-height">
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-image">
-                                <a href="{{ asset('items/Telemaintenance-KeepConnection.exe') }}">
-                                    <img src="{{ asset('pictures/windows-compatible.png') }}" class="card-image">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    {# MACOSX #}
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-image">
-                                <a href="{{ asset('items/Telemaintenance-KeepConnection.dmg') }}">
-                                    <img src="{{ asset('pictures/apple2.png') }}" class="card-image-apple">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    {# ANDROID #}
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-image">
-                                <a href="https://play.google.com/store/apps/details?id=com.teamviewer.quicksupport.market&hl=fr">
-                                    <img src="{{ asset('pictures/android-logo-png-transparent.png') }}" class="card-image-andro" target="_blank">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <h3 class="header center">Utilitaires</h3>
-                <p class="grey-text text-darken-3 lighten-3 center">Dans cette section, vous trouverez des applications
+                <h3 class="header">Utilitaires</h3>
+                <p class="grey-text text-darken-3 lighten-3">Dans cette section, vous trouverez des applications
                    utiles et pratiques pour voter usage de tout les jours</p>
-                <div class="container">
-
-                    <!-- ROW 1 -->
-                    <div class="row">
-                        <div class="col s12 m4 l4">
-                            <!-- VLC -->
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://i1.wp.com/www.viptuto.com/wp-content/uploads/2018/08/zz.jpg?w=1920&ssl=1">
-                                    <span class="card-title"></span>
-                                </div>
-                                <div class="card-content">
-                                    <p>VLC est un lecteur multimédia gratuit et libre et un système
-                                        capable de lire la plupart des fichiers multimédias ainsi que
-                                        des DVD, des CD Audio, des VCD, et divers protocoles de diffusion.
-                                    </p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="https://get.videolan.org/vlc/3.0.6/win32/vlc-3.0.6-win32.exe">Télécharger VLC</a>
-                                </div>
+                <!-- ROW 1 -->
+                <div class="row">
+                    {% for i in 1..10 %}
+                    <div class="col s12 m4 l4">
+{#                   LOOP FOREACH DOWNLOADS#}
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="https://i1.wp.com/www.viptuto.com/wp-content/uploads/2018/08/zz.jpg?w=1920&ssl=1">
+                                <span class="card-title"></span>
                             </div>
-                        </div>
-                        <div class="col s12 m4 l4">
-                            <!-- LibreOffice -->
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://linagora.com/wp-content/uploads/2018/06/LibreOffice-logo.png">
-                                    <span class="card-title"></span>
-                                </div>
-                                <div class="card-content">
-                                    <p>LibreOffice est une suite bureautique puissante.
-                                        Son interface claire et ses outils avancés vous permettent de
-                                        libérer votre créativité et de développer votre productivité
-                                    </p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="https://fr.libreoffice.org/donate/dl/win-x86_64/6.2.4/fr/LibreOffice_6.2.4_Win_x64.msi" target="_blank">Télécharger LibreOffice</a>
-                                </div>
+                            <div class="card-content">
+                                <p>VLC est un lecteur multimédia gratuit et libre et un système
+                                    capable de lire la plupart des fichiers multimédias ainsi que
+                                    des DVD, des CD Audio, des VCD, et divers protocoles de diffusion.
+                                </p>
                             </div>
-                        </div>
-                        <div class="col s12 m4 l4">
-                            <!-- JAVA -->
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://s24255.pcdn.co/wp-content/uploads/2014/05/oracle-java.jpg">
-                                    <span class="card-title"></span>
-                                </div>
-                                <div class="card-content">
-                                    <p>Java permet de jouer en ligne, de discuter avec des internautes
-                                        du monde entier, de calculer les intérêts de vos prêts ou de visualiser
-                                        des images en 3D, pour ne citer que ces exemples.
-                                    </p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="https://javadl.oracle.com/webapps/download/AutoDL?BundleId=238727_478a62b7d4e34b78b671c754eaaf38ab">Télécharger JAVA</a>
-                                </div>
+                            <div class="card-action">
+                                <a href="https://get.videolan.org/vlc/3.0.6/win32/vlc-3.0.6-win32.exe">Télécharger VLC</a>
                             </div>
                         </div>
                     </div>
-                    <!-- ROW 2 -->
-                    <div class="row">
-                        <div class="col s12 m4 l4">
-                            <!-- WINRAR -->
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://738047.smushcdn.com/1249282/wp-content/uploads/2019/02/WinRAR-Fixes-19-Year-Old-Vulnerability.jpg?lossy=1&strip=1&webp=1">
-                                    <span class="card-title"></span>
-                                </div>
-                                <div class="card-content">
-                                    <p>Il n'existe pas de meilleur moyen de compresser des fichiers pour un transfer
-                                        efficace et sécurisé, une transmission accélérée et
-                                        un stockage de données organisé de manière optimale.
-                                    </p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="https://www.win-rar.com/postdownload.html?&L=10" target="_blank">Télécharger WinRAR</a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col s12 m4 l4">
-                            <!-- ADOBE READER -->
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://738047.smushcdn.com/1249282/wp-content/uploads/2019/02/Adobe-Repatches-Update-1920x1080.jpg?lossy=1&strip=1&webp=1">
-                                    <span class="card-title"></span>
-                                </div>
-                                <div class="card-content">
-                                    <p>Adobe Acrobat Reader DC est la référence mondiale des logiciels
-                                        gratuits pour la consultation, l’impression et l’insertion de
-                                        commentaires dans des documents PDF
-                                    </p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="https://get.adobe.com/fr/reader/download/?installer=Reader_DC_2019.012.20034_French_for_Windows&stype=7575&standalone=1" target="_blank">Télécharger Adobe Reader</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s12 m4 l4">
-                            <!-- ADOBE FLASH PLAYER -->
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://assets.elijahshepard.com/es-main/black-hole/000-000-0000-0000/hero_adobe-flash-player.jpg">
-                                    <span class="card-title"></span>
-                                </div>
-                                <div class="card-content">
-                                    <p>Adobe® Flash® Player est un module externe de navigation léger
-                                        qui offre des expériences
-                                        cohérentes et engageante pour l'utilisateur, la lecture audio/vidéo
-                                        et un principe de jeu étonnant.
-                                    </p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="https://get.adobe.com/fr/flashplayer/download/?installer=FP_32_for_Firefox_-_NPAPI&stype=7575&standalone=1" target="_blank">Télécharger Flash Player</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

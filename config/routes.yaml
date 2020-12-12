@@ -7,8 +7,12 @@ app_index:
     path: /
     controller: App\Controller\DefaultController::index
     
+app_maintenance:
+    path: /telemaintenance
+    controller: App\Controller\DefaultController::maintenance
+
 app_downloads:
-    path: /maintenance
+    path: /telechargements
     controller: App\Controller\DefaultController::downloads
     
 app_whoarewe:

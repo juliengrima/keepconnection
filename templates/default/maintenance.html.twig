@@ -1,0 +1,70 @@
+{% extends'layout.html.twig' %}
+
+{% block title %}télémaintenance-utilitaires{% endblock %}
+
+{% block body %}
+    <div class="parallax-container">
+        <div class="parallax"><img src="{{ asset('pictures/TeamViewer.png.webp') }}" class="responsive-img" alt="Parallax"></div>
+    </div>
+    <div class="section white">
+        <div class="row container">
+            <div class="row center">
+                <h3 class="header">Télémaintenance</h3>
+                <p class="grey-text text-darken-3 lighten-3">Dans cette section, vous trouverez les applications
+                    de télémaintenance pour chacun des sytèmes d'exploitations.</p>
+{#                USER & ADMIN BUTONS FOR TICKETS#}
+                <div class="col s6 m6 l6">
+                    <a href="{{ path('app_maintenance_new_ticket') }}">Nouveau ticket de maintenance</a>
+                </div>
+                <div class="col s6 m6 l6">
+                    <a href="{{ path('app_maintenance_index_ticket') }}">Mes tickets de maintenances</a>
+                </div>
+            </div>
+            <div class="container center">
+                <h2 class="header title">Téléchargements</h2>
+{#                USER Downloads maintenance utilities#}
+                {# WINDOWS #}
+                <div class="row row-height">
+                    <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href="{{ asset('items/Telemaintenance-KeepConnection.exe') }}">
+                                    <img src="{{ asset('pictures/windows-compatible.jpg') }}" class="card-image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {# MACOSX #}
+                    <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href="{{ asset('items/Telemaintenance-KeepConnection.dmg') }}">
+                                    <img src="{{ asset('pictures/apple2.png') }}" class="card-image-apple">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {# ANDROID #}
+                    <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href="https://play.google.com/store/apps/details?id=com.teamviewer.quicksupport.market&hl=fr">
+                                    <img src="{{ asset('pictures/android-logo-png-transparent.png') }}" class="card-image-andro" target="_blank">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.parallax').parallax();
+        });
+    </script>
+{% endblock %}

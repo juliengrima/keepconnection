@@ -20,6 +20,11 @@ class DefaultController extends AbstractController
         return $this->render('default/downloads.html.twig');
     }
 
+    public function maintenance(){
+
+        return $this->render('default/maintenance.html.twig');
+    }
+
     public function whoAreWe(){
 
         return $this->render('default/whoarewe.html.twig');
