@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:900i');
+/* GENERAL*/
+.row-height{
+    height: 50%;
+}
+
 /* NAVBAR */
 .material-icons-menu{
     position: fixed;
@@ -73,8 +78,6 @@ ul.icons {
     color: ghostwhite !important;
     font-size: 1.5em;
 }
-
-/* Icon */
 
 .icon {
     text-decoration: none;

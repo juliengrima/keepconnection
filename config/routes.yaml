@@ -33,6 +33,27 @@ app_reference:
     
 ############################################################
 ############################################################
-####################### TEMPLATES ##########################
+######################## TICKETTING ########################
+############################################################
+############################################################
+app_maintenance_index_ticket:
+    path : /ticket_de_maintenance
+    controller: App\Controller\TickettingController::index
+
+app_maintenance_new_ticket:
+    path : /ticket_de_maintenance
+    controller: App\Controller\TickettingController::new
+    
+app_maintenance_edit_ticket:
+    path : /ticket_de_maintenance
+    controller: App\Controller\TickettingController::edit
+    
+app_maintenance_delete_ticket:
+    path : /ticket_de_maintenance
+    controller: App\Controller\TickettingController::delete
+    
+############################################################
+############################################################
+######################## TICKETTING ########################
 ############################################################
 ############################################################
