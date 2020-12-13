@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Downloads{% endblock %}
+
+{% block body %}
+    <h1>Downloads</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ download.id }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ download.image }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ download.description }}</td>
+            </tr>
+            <tr>
+                <th>Link</th>
+                <td>{{ download.link }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('downloads_index') }}">back to list</a>
+
+    <a href="{{ path('downloads_edit', {'id': download.id}) }}">edit</a>
+
+    {{ include('downloads/_delete_form.html.twig') }}
+{% endblock %}
