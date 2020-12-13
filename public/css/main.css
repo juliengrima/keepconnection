@@ -18,6 +18,17 @@ table{
     margin-top: 10%;
 }
 
+.delete-buton{
+    color: #fbc02d!important;
+    background-color: #BD3E31;
+    padding: 3%;
+}
+.delete-buton:hover{
+    color: #F44336!important;
+    background-color: #fbc02d;
+    transition-duration: 1s;
+}
+
 /* NAVBAR */
 .material-icons-menu{
     position: fixed;
