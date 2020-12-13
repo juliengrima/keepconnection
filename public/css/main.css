@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:900i');
 /* GENERAL*/
+.html{
+    background-color: gainsboro !important;
+}
+
 .row-height{
     height: 50%;
 }

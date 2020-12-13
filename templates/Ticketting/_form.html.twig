@@ -1,4 +1,38 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
+    <div class="row center">
+        <div class="col s12 m12 l12">
+            <div type="hidden">
+                {{ form_widget(form.repair) }}
+            </div>
+            <label>
+                <input id="{{ form.repair.vars.id }}" class="with-gap" value="0" name="{{ form.repair.vars.full_name }}" type="checkbox"  />
+                <span>Télémaintenance</span>
+            </label>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col s12 m6 l6">
+                {{ form_label(form.society, 'Nom de la société/Personne') }}
+                {{ form_widget(form.society) }}
+                {{ form_errors(form.society) }}
+            </div>
+            <div class="col s12 m6 l6">
+                {{ form_label(form.phone, 'Téléphone') }}
+                {{ form_widget(form.phone) }}
+                {{ form_errors(form.phone) }}
+            </div>
+        </div>
+    <div class="row">
+        <div class="col s12 m6 l6">
+            {{ form_label(form.address, 'Adresse') }}
+            {{ form_widget(form.address) }}
+            {{ form_errors(form.address) }}
+        </div>
+        <div class="col s12 m6 l6">
+            {{ form_label(form.comment, 'Description de la panne') }}
+            {{ form_widget(form.comment) }}
+            {{ form_errors(form.comment) }}
+        </div>
+    </div>
     <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

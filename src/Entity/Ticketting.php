@@ -13,7 +13,7 @@ class Ticketting
     public function __toString()
     {
         // TODO: Implement __toString() method.
-        return $this->society . $this->user_id;
+        return $this->society . $this->repair;
     }
 
     public function __construct()
@@ -88,7 +88,7 @@ class Ticketting
     private $date;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $repair;
 
