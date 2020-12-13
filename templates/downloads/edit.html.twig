@@ -1,13 +1,23 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout.html.twig' %}
 
-{% block title %}Edit Downloads{% endblock %}
+{% block title %}Modifier le téléchargement{% endblock %}
 
 {% block body %}
-    <h1>Edit Downloads</h1>
-
-    {{ include('downloads/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('downloads_index') }}">back to list</a>
-
-    {{ include('downloads/_delete_form.html.twig') }}
+    <div class="container">
+        <div class="row center">
+            <h1>Téléchargements</h1>
+            <h3>Modification du téléchargement</h3>
+        </div>
+        <div class="row center">
+            {{ include('downloads/_form.html.twig', {'button_label': 'Update'}) }}
+            {#            DIV CLASS ROW#}
+                <div class="col s12 m4 l4">
+                    {{ include('downloads/_delete_form.html.twig') }}
+                </div>
+                <div class="col s12 m4 l4">
+                    <a href="{{ path('downloads_index') }}">Retour aux téléchargements</a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

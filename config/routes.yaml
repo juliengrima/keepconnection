@@ -13,7 +13,7 @@ app_maintenance:
 
 app_downloads:
     path: /telechargements
-    controller: App\Controller\DefaultController::downloads
+    controller: App\Controller\DownloadsController::index
     
 app_whoarewe:
     path: /qui_sommes_nous

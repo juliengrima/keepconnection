@@ -1,39 +1,116 @@
-{% extends 'base.html.twig' %}
+{% extends'layout.html.twig' %}
 
-{% block title %}Downloads index{% endblock %}
+{% block title %}téléchargements-utilitaires{% endblock %}
 
 {% block body %}
-    <h1>Downloads index</h1>
+    <div class="parallax-container">
+        <div class="parallax"><img src="{{ asset('pictures/Logo_telechargement.png') }}" class="responsive-img" alt="Parallax"></div>
+    </div>
+    <div class="section light-grey">
+        <div class="container">
+            <div class="row center">
+                <h3 class="header">Utilitaires</h3>
+                <p class="grey-text text-darken-3 lighten-3">Dans cette section, vous trouverez des applications
+                    utiles et pratiques pour voter usage de tout les jours</p>
+                <!-- ROW 1 -->
+                <div class="row center">
+                    <a href="{{ path('downloads_new') }}">Ajouter une application</a>
+                </div>
+                <div class="row">
+                    {% for download in downloads %}
+                        <div class="col s12 m4 l4">
+                            {#                   LOOP FOREACH DOWNLOADS#}
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="{{ asset(download.image) }}">
+                                    <span class="card-title"></span>
+                                </div>
+                                <div class="card-content">
+                                    <p>{{ download.description }}</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="{{ download.link }}">Télécharger</a>
+                                    <a href="{{ path('downloads_edit', {'id': download.id}) }}" class="">Modifier</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="center">
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Image</th>
-                <th>Description</th>
-                <th>Link</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for download in downloads %}
-            <tr>
-                <td>{{ download.id }}</td>
-                <td>{{ download.image }}</td>
-                <td>{{ download.description }}</td>
-                <td>{{ download.link }}</td>
-                <td>
-                    <a href="{{ path('downloads_show', {'id': download.id}) }}">show</a>
-                    <a href="{{ path('downloads_edit', {'id': download.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('downloads_new') }}">Create new</a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.parallax').parallax();
+        });
+    </script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#{% block body %}#}
+{#    <h1>Downloads index</h1>#}
+
+{#    <table class="table">#}
+{#        <thead>#}
+{#            <tr>#}
+{#                <th>Id</th>#}
+{#                <th>Image</th>#}
+{#                <th>Description</th>#}
+{#                <th>Link</th>#}
+{#                <th>actions</th>#}
+{#            </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#        {% for download in downloads %}#}
+{#            <tr>#}
+{#                <td>{{ download.id }}</td>#}
+{#                <td>{{ download.image }}</td>#}
+{#                <td>{{ download.description }}</td>#}
+{#                <td>{{ download.link }}</td>#}
+{#                <td>#}
+{#                    <a href="{{ path('downloads_show', {'id': download.id}) }}">show</a>#}
+{#                    <a href="{{ path('downloads_edit', {'id': download.id}) }}">edit</a>#}
+{#                </td>#}
+{#            </tr>#}
+{#        {% else %}#}
+{#            <tr>#}
+{#                <td colspan="5">no records found</td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#        </tbody>#}
+{#    </table>#}
+
+{#    #}
+{#{% endblock %}#}
