@@ -41,12 +41,12 @@
                     <td>{{ ticketting.society }}</td>
                     <td>{{ ticketting.phone }}</td>
                     <td>{{ ticketting.comment }}</td>
-                    <td>{{ ticketting.date ? ticketting.date|date('Y-m-d H:i:s') : '' }}</td>
-                    <td>{{ ticketting.repair ? 'Yes' : 'No' }}</td>
+                    <td>{{ ticketting.date ? ticketting.date|date('d-m-Y') : '' }}</td>
+                    <td>{{ ticketting.repair ? 'Télémaintenance' : 'A Domicile' }}</td>
                     <td>{{ ticketting.address }}</td>
                     <td>
-                        <a href="{{ path('ticketting_show', {'id': ticketting.id}) }}">show</a>
-                        <a href="{{ path('ticketting_edit', {'id': ticketting.id}) }}">edit</a>
+{#                        <a href="{{ path('ticketting_show', {'id': ticketting.id}) }}">show</a>#}
+                        <a href="{{ path('ticketting_edit', {'id': ticketting.id}) }}">éditer</a>
                     </td>
                 </tr>
             {% else %}

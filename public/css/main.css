@@ -8,6 +8,12 @@
     height: 50%;
 }
 
+input{
+    -webkit-box-shadow: 14px 19px 32px -11px rgba(0,0,0,0.67);
+    -moz-box-shadow: 14px 19px 32px -11px rgba(0,0,0,0.67);
+    box-shadow: 14px 19px 32px -11px rgba(0,0,0,0.67);
+}
+
 table{
     margin-top: 10%;
 }
