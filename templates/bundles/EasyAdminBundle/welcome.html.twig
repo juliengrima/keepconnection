@@ -17,7 +17,7 @@
         of your Dashboard. To do that, open the following file in your editor:
     </p>
 
-    <pre>{{ dashboard_controller_filepath }}</pre>
+    <pre>{#{{ dashboard_controller_filepath }}#}</pre>
 
     <p>
         Then, add the following method to it to customize the Dashboard start page:
@@ -30,7 +30,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 // ...
 
-class {{ dashboard_controller_class }} extends AbstractDashboardController
+class {#{{ dashboard_controller_class }}#} extends AbstractDashboardController
 {
     /**
      * @Route("/admin")
